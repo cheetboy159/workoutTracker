@@ -2,15 +2,11 @@ const router = require('express').Router();
 // const express = require("express");
 // const router = express.Router();
 const db = require("../models");
-
-
-
 // middleware that is specific to this router
 // router.use(function timeLog(req, res, next) {
 //     console.log("Time: ", Date.now());
 //     next();
 // });
-
 router.get("/api/workouts", (req, res) => {
     db.Workout.aggregate([
         {
@@ -26,7 +22,6 @@ router.get("/api/workouts", (req, res) => {
             res.json(err);
         });
 });
-
 router.post("/api/workouts", (req, res) => {
     db.Workout.create({})
         .then(dbWorkout => {
@@ -36,7 +31,6 @@ router.post("/api/workouts", (req, res) => {
             res.json(err);
         });
 });
-
 router.put("/api/workouts/:id", async (req, res) => {
     db.Workout.findOneAndUpdate(
         {
@@ -52,7 +46,6 @@ router.put("/api/workouts/:id", async (req, res) => {
             res.json(err);
         });
 });
-
 router.get("/api/workouts/range", (req, res) => {
     db.Workout.aggregate([
         {
