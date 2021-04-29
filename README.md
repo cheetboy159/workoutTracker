@@ -10,7 +10,7 @@ This app lets the user to record workout they have completed, doing so allows th
 
 This is first look at what the app looks like
 
-![Weather Dashboard](./assets/workoutDashboard.JPG)
+![Workout Dashboard](./assets/workoutDashboard.JPG)
 
 [I am a link to the web page](https://salty-sierra-79578.herokuapp.com/)
 
